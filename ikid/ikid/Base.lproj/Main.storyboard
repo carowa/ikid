@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13771" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="QTF-w1-BqR">
     <device id="retina4_7" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -26,6 +26,9 @@
                                 <state key="normal" title="Pun">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="hello:forEvent:" destination="SPK-zY-LiI" eventType="touchDragExit" id="fIA-TE-HG0"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hg9-fz-cky">
                                 <rect key="frame" x="140" y="554" width="96" height="27"/>
@@ -42,8 +45,9 @@
                     <tabBarItem key="tabBarItem" title="Puns" id="62H-hY-Qcu"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="byn-SG-8ha" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="SPK-zY-LiI" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="673" y="385"/>
+            <point key="canvasLocation" x="670" y="507"/>
         </scene>
         <!--Dad Jokes-->
         <scene sceneID="g99-LK-wDR">
@@ -61,6 +65,9 @@
                                 <state key="normal" title="Dad Joke">
                                     <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 </state>
+                                <connections>
+                                    <action selector="flip:" destination="B6q-2Y-qWZ" eventType="touchUpInside" id="02b-bF-k5Q"/>
+                                </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="chR-qX-1wX">
                                 <rect key="frame" x="140" y="554" width="96" height="27"/>
@@ -78,26 +85,18 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="sET-3b-Njo" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="B6q-2Y-qWZ" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="672.46376811594212" y="-275.54347826086956"/>
+            <point key="canvasLocation" x="670" y="-225"/>
         </scene>
         <!--Knock Kock Jokes-->
         <scene sceneID="jSR-RO-Xp1">
             <objects>
-                <viewController id="VNw-19-S9p" sceneMemberID="viewController">
+                <viewController id="VNw-19-S9p" customClass="UITabBarController" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="32d-ct-mSB">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="NSk-0b-QaV">
-                                <rect key="frame" x="46" y="174" width="281" height="323"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
-                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.73311750856164382" colorSpace="custom" customColorSpace="sRGB"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
-                                <state key="normal" title="Knock, knock...">
-                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                </state>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Ytl-Uo-EDi">
                                 <rect key="frame" x="140" y="554" width="96" height="27"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
@@ -105,6 +104,18 @@
                                 <state key="normal" title="Next">
                                     <color key="titleColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.73311750860000002" colorSpace="custom" customColorSpace="sRGB"/>
                                 </state>
+                            </button>
+                            <button opaque="NO" contentMode="center" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="wordWrap" translatesAutoresizingMaskIntoConstraints="NO" id="kUy-rF-p79">
+                                <rect key="frame" x="48" y="172" width="281" height="323"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMinX="YES" widthSizable="YES" flexibleMaxX="YES" flexibleMinY="YES" heightSizable="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.0048598507420000003" green="0.096086271109999996" blue="0.57499289509999996" alpha="0.73311750860000002" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="30"/>
+                                <state key="normal" title="Knock knock...">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                </state>
+                                <connections>
+                                    <action selector="flip:" destination="5YP-RZ-Uim" eventType="touchUpInside" id="goU-Bj-Anq"/>
+                                </connections>
                             </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
@@ -114,8 +125,9 @@
                     <simulatedTabBarMetrics key="simulatedBottomBarMetrics"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="e10-jO-vVD" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <exit id="5YP-RZ-Uim" userLabel="Exit" sceneMemberID="exit"/>
             </objects>
-            <point key="canvasLocation" x="671.01449275362324" y="-962.77173913043487"/>
+            <point key="canvasLocation" x="669.60000000000002" y="-962.96851574212906"/>
         </scene>
         <!--Tab Bar Controller-->
         <scene sceneID="tYa-aJ-buH">
