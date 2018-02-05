@@ -19,13 +19,13 @@ class knockKnockViewController: UIViewController {
         case 0:
             knockKnock.text = "Knock knock..."
         case 1:
-            knockKnock.text = "Who's there"
+            knockKnock.text = "Who's there?"
         case 2:
-            knockKnock.text = "Interrupting Cow"
+            knockKnock.text = "To"
         case 3:
-            knockKnock.text = "Interrupting Cow who?"
+            knockKnock.text = "To who?"
         case 4:
-            knockKnock.text = "Mooo!!!"
+            knockKnock.text = "To *whom*"
         default:
             knockKnock.text = "Knock knock..."
         }
@@ -76,9 +76,9 @@ class punsViewController: UIViewController {
         UIView.transition(with: self.view, duration: 0.325, options: UIViewAnimationOptions.transitionFlipFromRight, animations: {}, completion: { (finished: Bool) -> () in })
         punFlipped = !punFlipped
         if(punFlipped) {
-            pun.text = "a chicken!!!"
+            pun.text = "I once did a theatrical performance about puns..."
         } else {
-            pun.text = "What do you call..."
+            pun.text = "it was a play on words."
         }
     }
     
