@@ -9,7 +9,6 @@
 import UIKit
 
 class knockKnockViewController: UIViewController {
-
     @IBOutlet weak var knockKnock: UILabel!
     var knockKnockStage : Int = 0
     
@@ -41,5 +40,56 @@ class knockKnockViewController: UIViewController {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
+}
 
+class dadJokesViewController: UIViewController {
+    @IBOutlet weak var dadJoke: UILabel!
+    var dadJokeFlipped : Bool = false
+    
+    @IBAction func dadJokesFlipped(_ sender: UIButton) {
+        UIView.transition(with: self.view, duration: 0.325, options: UIViewAnimationOptions.transitionFlipFromRight, animations: {}, completion: { (finished: Bool) -> () in })
+        dadJokeFlipped = !dadJokeFlipped
+        if(dadJokeFlipped) {
+            dadJoke.text = "Hi Hungry, I'm dad"
+        } else {
+            dadJoke.text = "Dad, I'm hungry"
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
+}
+
+class punsViewController: UIViewController {
+    @IBOutlet weak var pun: UILabel!
+    var punFlipped : Bool = false
+    
+    @IBAction func punsFlipped(_ sender: UIButton) {
+        UIView.transition(with: self.view, duration: 0.325, options: UIViewAnimationOptions.transitionFlipFromRight, animations: {}, completion: { (finished: Bool) -> () in })
+        punFlipped = !punFlipped
+        if(punFlipped) {
+            pun.text = "a chicken!!!"
+        } else {
+            pun.text = "What do you call..."
+        }
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view, typically from a nib.
+    }
+    
+    override func didReceiveMemoryWarning() {
+        super.didReceiveMemoryWarning()
+        // Dispose of any resources that can be recreated.
+    }
+    
 }
